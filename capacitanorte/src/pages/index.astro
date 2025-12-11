@@ -1,7 +1,17 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import "../styles/global.css";
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';	
+import InfoSection from '../components/InfoSection.astro';
+import Features from '../components/Features.astro';
+import Footer from '../components/Footer.astro';
 ---
 <MainLayout title="Inicio">
-    <h1 class="text-4xl text-center pt-20 text-pink-500">¡Astro con Background!</h1>
-</MainLayout>
+    <Navbar />
+    <Hero />
+    <InfoSection />
+    <Features />
+    <Footer />
+
+	
