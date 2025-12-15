@@ -1,27 +1,27 @@
 ---
 const links = [
-    { title: 'Home', href: '#' },
-    { title: 'Nosotros', href: '#nosotros' },
-    { title: 'Cursos', href: '#cursos' },
-    { title: 'Contacto', href: '#contacto' },
+    { title: 'Home', href: '/' },
+    { title: 'Nosotros', href: '/nosotros' },
+    { title: 'Cursos', href: '/cursos' },
+    { title: 'Contacto', href: '/contacto' },
 ];
 ---
 <header class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-20">
+        <div class="flex justify-between items-center h-26">
             <!-- Logo -->
             <div class="flex-shrink-0 flex items-center">
                 <a href="#" class="flex items-center gap-2">
-                    <img src="/logo.png" alt="Capacitanorte" class="h-12 w-auto" />
+                    <img src="/logo.png" alt="Capacitanorte" class="h-24 w-auto" />
                 </a>
             </div>
 
             <!-- Desktop Menu -->
             <nav class="hidden md:flex space-x-8">
                 {links.map(link => (
-                    <a href={link.href} class="text-gray-700 hover:text-[#7c629f] px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                    <a href={link.href} class="text-[#099696] hover:text-[#7c629f] px-3 py-2 rounded-md text-lg font-medium transition-colors">
                         {link.title}
-                    </a>
+                    </a>    
                 ))}
             </nav>
 
