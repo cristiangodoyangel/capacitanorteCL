@@ -1,0 +1,53 @@
+---
+const courseLists = [
+    {
+        category: 'Operación Equipos (Tierra)',
+        items: ['Minicargador', 'Cargador Frontal', 'Camión de Extracción (CAT)', 'Excavadora Hidráulica', 'Retroexcavadora', 'Bulldozer', 'Motoniveladora', 'Rodillo Compactador']
+    },
+     {
+        category: 'Equipos Móviles e Izaje',
+        items: ['Grúa Horquilla', 'Puente Grúa', 'Manlift (Plataformas)', 'Grúa Torre', 'Camión Pluma', 'Grúa Telescópica', 'Rigger', 'Telehandler']
+    },
+    {
+        category: 'Seguridad Laboral',
+        items: ['Primeros Auxilios', 'Manejo de Extintores', 'Trabajo en Altura', 'Espacios Confinados', 'Riesgos Eléctricos', 'Sustancias Peligrosas', 'Aislación y Bloqueo', 'Metodología ICAM']
+    },
+    {
+        category: 'Procesos Mineros',
+        items: ['Metrología', 'Análisis de Vibraciones', 'Soldadura (MIG/TIG)', 'Oxicorte', 'Interpretación de Planos', 'Electricidad Industrial', 'Chancado y Molienda', 'Correas Transportadoras']
+    },
+    {
+         category: 'Computación y Gestión',
+         items: ['Excel (Básico-Avanzado)', 'Power BI', 'Microsoft Project', 'SAP', 'AutoCAD', 'SolidWorks', 'Auditor Trinorma ISO', 'Liderazgo']
+    }
+];
+---
+<section class="py-20 bg-gray-50" id="cursos">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <span class="text-[#099696] font-bold uppercase tracking-wider text-sm">Nuestros Programas</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-[#7c629f] mt-2">Cursos Disponibles</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {courseLists.map(list => (
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6 border border-gray-100">
+                    <h3 class="text-xl font-bold text-[#7c629f] mb-4 border-b pb-2 border-gray-100">{list.category}</h3>
+                    <ul class="space-y-2">
+                        {list.items.map(item => (
+                            <li class="flex items-start text-gray-600 text-sm">
+                                <svg class="w-4 h-4 text-[#099696] mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                {item}
+                            </li>
+                        ))}
+                    </ul>
+                    <div class="mt-6 pt-4 border-t border-gray-50 flex justify-end">
+                         <a href="#" class="text-[#099696] hover:text-[#7c629f] text-sm font-bold flex items-center">
+                            Ver más <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>

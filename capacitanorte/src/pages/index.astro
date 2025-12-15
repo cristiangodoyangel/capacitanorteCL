@@ -1,17 +1,34 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import "../styles/global.css";
-import Navbar from '../components/Navbar.astro';
-import Hero from '../components/Hero.astro';	
-import InfoSection from '../components/InfoSection.astro';
-import Features from '../components/Features.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import AboutGrid from '../components/AboutGrid.astro';
+import SectionStats from '../components/SectionStats.astro';
+import CourseCategories from '../components/CourseCategories.astro';
+import CoursesSection from '../components/CoursesSection.astro';
 import Footer from '../components/Footer.astro';
 ---
-<MainLayout title="Inicio">
-    <Navbar />
+<MainLayout title="Capacitanorte - Expertos en Capacitación">
+    <Header />
     <Hero />
-    <InfoSection />
-    <Features />
-    <Footer />
+    <AboutGrid /> <!-- Helping People Grow -->
+    <SectionStats />
+    <CourseCategories /> <!-- Share your knowledge -->
+    <CoursesSection /> <!-- Upcoming Events/Courses -->
+    
+    <!-- CTA Section -->
+    <section class="py-20 bg-[#099696] text-white">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-8 md:mb-0 max-w-2xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Listo para comenzar tu formación?</h2>
+                <p class="text-lg opacity-90">Únete a cientos de profesionales que ya están impulsando su carrera con nosotros.</p>
+            </div>
+            <a href="#contacto" class="bg-white text-[#099696] hover:bg-gray-100 font-bold py-4 px-10 rounded-full shadow-lg transition-transform transform hover:scale-105">
+                Inscríbete Hoy
+            </a>
+        </div>
+    </section>
 
-	
+    <Footer />
+</MainLayout>
