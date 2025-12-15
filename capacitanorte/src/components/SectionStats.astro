@@ -1,22 +1,55 @@
 ---
+const categories = [
+    { name: 'Maquinaria Pesada', color: 'bg-[#7c629f]', icon: 'M' },
+    { name: 'Seguridad', color: 'bg-[#7c629f]', icon: 'S' },
+    { name: 'Computación', color: 'bg-[#7c629f]', icon: 'C' },
+    { name: 'Desarrollo', color: 'bg-[#7c629f]', icon: 'D' },
+    { name: 'Minería', color: 'bg-[#7c629f]', icon: 'P' },
+];
 ---
-<section class="py-16 bg-[#1a1a1a] text-white">
-    <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<section class="relative py-24 bg-[#1a1a1a] text-white overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+        <img src="/capacitacion.jpg" alt="Background" class="w-full h-full object-cover opacity-50" />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/70 to-[#1a1a1a]/50"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         <div>
-            <div class="text-4xl md:text-5xl font-bold text-[#099696] mb-2">10+</div>
+            <div class="text-4xl md:text-5xl font-bold text-[#099696] mb-2">12+</div>
             <div class="text-sm md:text-base text-gray-400">Años de Experiencia</div>
         </div>
         <div>
-            <div class="text-4xl md:text-5xl font-bold text-[#7c629f] mb-2">5000+</div>
+            <div class="text-4xl md:text-5xl font-bold text-[#099696] mb-2">5000+</div>
             <div class="text-sm md:text-base text-gray-400">Alumnos Certificados</div>
         </div>
         <div>
-            <div class="text-4xl md:text-5xl font-bold text-[#099696] mb-2">100+</div>
+            <div class="text-4xl md:text-5xl font-bold text-[#099696] mb-2">40+</div>
             <div class="text-sm md:text-base text-gray-400">Cursos Disponibles</div>
         </div>
         <div>
-            <div class="text-4xl md:text-5xl font-bold text-[#7c629f] mb-2">15+</div>
+            <div class="text-4xl md:text-5xl font-bold text-[#099696] mb-2">10+</div>
             <div class="text-sm md:text-base text-gray-400">Instructores Expertos</div>
         </div>
+
     </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 text-center mt-16">
+        <h2 class="text-2xl font-bold text-white mb-10">Áreas de Capacitación</h2>
+        
+        <div class="flex flex-wrap justify-center gap-8 md:gap-16">
+            {categories.map(cat => (
+                <div class="flex flex-col items-center group cursor-pointer">
+                    <div class={`w-24 h-24 ${cat.color} rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg transform group-hover:scale-110 transition duration-300 mb-3`}>
+                        {cat.icon}
+                    </div>
+                    <span class="text-2xl font-medium text-[#099696] group-hover:text-[#7c629f] transition-colors">{cat.name}</span>
+                </div>
+            ))}
+        </div>
+
+       
+
 </section>
+
+
+ 
+
